@@ -62,13 +62,14 @@ function playerButtons() {
     this.name = _name;
   
     button.position(_xpos, _ypos);
-    button.style('width', '50px');
+    button.style('width', '60px');
     button.style('height', '40px');
     button.style('font-weight', 'bold');
     button.style('font-size', '22px');
     button.style('border', '0');
     button.style('outline', 'none');
     button.style('background', 'none');
+    button.style('font-family', 'Jura');
     button.style('color', 'white');
   
     button.mousePressed(_action);
@@ -76,9 +77,9 @@ function playerButtons() {
   
   // prev button
   Button(
-    (width / 2) - 85,
-    (windowHeight / 2) - 18,
-    '<i class="fa fa-fast-backward"></i>',
+    (width / 2) - 100,
+    (windowHeight / 2),
+    'Prev',
     function () {
       player.prevTrack();
     }
@@ -86,9 +87,9 @@ function playerButtons() {
 
   // play button
   Button(
-    (width / 2) - 25,
-    (windowHeight / 2) - 18,
-    '<i class="fa fa-play"></i>',
+    (width / 2) - 70,
+    (windowHeight / 2) - 40,
+    'Play/Pause',
     function () {
       if (player.isTrackPlaying() == false) {
         player.playTrack();
@@ -101,8 +102,8 @@ function playerButtons() {
   // next button
   Button(
     (width / 2) + 35,
-    (windowHeight / 2) - 18,
-    '<i class="fa fa-fast-forward"></i>',
+    (windowHeight / 2),
+    'Next',
     function() {
       player.nextTrack();
     }
@@ -235,7 +236,7 @@ function Player(_config) {
       // load sound success callback
       function () {
         _this.loading = false;
-
+        
         // start track automatically when this.autoplay = true
         if (_this.autoplay == true) {
           _this.playTrack();

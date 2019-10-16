@@ -1,0 +1,20 @@
+{
+    "tracks": [
+        {
+            "image": "images/kyoto.jpg",
+            "audio": "music/tonez-re-c-kyoto.mp3"
+        },
+        {
+            "image": "images/relax.jpg",
+            "audio": "music/this-is-my-tape-for-you.mp3"
+        },
+        {
+            "image": "images/jellyfish.jpg",
+            "audio": "music/the-dub-vaders-water-dub.mp3"
+        },
+        {
+            "image": "images/sparks.jpg",
+            "audio": "music/nothing.mp3"
+        }
+    ]
+}

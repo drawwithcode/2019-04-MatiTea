@@ -71,15 +71,16 @@ function playerButtons() {
     button.style('background', 'none');
     button.style('font-family', 'Jura');
     button.style('color', 'white');
+    button.style('padding', '3px 7px 2px');
   
     button.mousePressed(_action);
   }
   
   // prev button
   Button(
-    (width / 2) - 100,
-    (windowHeight / 2),
-    'Prev',
+    (width / 2) - 95,
+    (windowHeight / 2) - 20,
+    '<svg style="width:30px;height:30px" viewBox="0 0 24 24"><path fill="currentColor" d="M6,18V6H8V18H6M9.5,12L18,6V18L9.5,12Z" /></svg>',
     function () {
       player.prevTrack();
     }
@@ -87,9 +88,9 @@ function playerButtons() {
 
   // play button
   Button(
-    (width / 2) - 70,
-    (windowHeight / 2) - 40,
-    'Play/Pause',
+    (width / 2) - 30,
+    (windowHeight / 2) - 20,
+    '<svg style="width:30px;height:30px" viewBox="0 0 24 24"><path fill="currentColor" d="M3,5V19L11,12M13,19H16V5H13M18,5V19H21V5" /></svg>',
     function () {
       if (player.isTrackPlaying() == false) {
         player.playTrack();
@@ -102,8 +103,8 @@ function playerButtons() {
   // next button
   Button(
     (width / 2) + 35,
-    (windowHeight / 2),
-    'Next',
+    (windowHeight / 2) - 20,
+    '<svg style="width:30px;height:30px" viewBox="0 0 24 24"><path fill="currentColor" d="M16,18H18V6H16M6,18L14.5,12L6,6V18Z" /></svg>',
     function() {
       player.nextTrack();
     }
